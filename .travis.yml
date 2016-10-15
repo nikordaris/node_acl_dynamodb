@@ -4,5 +4,6 @@ sudo: false
 node_js:
   - 'stable'
 
-before_install:
-  - sh dynamodb.sh
+before_script:
+  - chmod a+x dynamodb.sh
+  - ./dynamodb.sh
