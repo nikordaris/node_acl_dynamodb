@@ -1,4 +1,4 @@
-var Acl = require('../'),
+var dynamodbBackend = require('../'),
     tests = require('../node_modules/acl/test/tests');
 
 describe('DynamoDB - Default', function() {
@@ -12,12 +12,12 @@ describe('DynamoDB - Default', function() {
                 region: "us-east-1",
                 apiVersion: "2016-01-07"
             });
-        self.backend = new Acl.dynamodbBackend(db, "acl");
+        self.backend = new dynamodbBackend(db, "acl");
         done();
-    })
+    });
 
-    run()
-})
+    run();
+});
 
 
 describe('DynamoDB - useSingle', function() {
@@ -31,15 +31,15 @@ describe('DynamoDB - useSingle', function() {
                 region: "us-east-1",
                 apiVersion: "2016-01-07"
             });
-        self.backend = new Acl.dynamodbBackend(db, "acl", true);
+        self.backend = new dynamodbBackend(db, "acl", true);
         done();
-    })
+    });
 
-    run()
-})
+    run();
+});
 
 function run() {
     Object.keys(tests).forEach(function(test) {
-        tests[test]()
-    })
+        tests[test]();
+    });
 }

@@ -33,11 +33,12 @@ var db = new AWS.DynamoDB({
 
 // require acl and create DynamoDB backend
 var Acl = require('acl');
+var dynamodbBackend = require('acl-dynamodb');
 // Doesn't set a 'prefix' for collections and separates buckets into multiple collections.
-acl = new Acl(new Acl.dynamodbBackend(db));
+acl = new Acl(new dynamodbBackend(db));
 
 // Alternatively, set a prefix and combined buckets into a single collection
-acl = new Acl(new Acl.dynamodbBackend(db, 'acl_', true));
+acl = new Acl(new dynamodbBackend(db, 'acl_', true));
 ```
 
 ##Documentation

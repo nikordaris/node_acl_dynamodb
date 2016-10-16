@@ -30,7 +30,7 @@
     "mocha": "^3.1.2"
   },
   "scripts": {
-    "pretest": "eslint lib/dynamodb-backend.js",
+    "pretest": "eslint lib/dynamodb-backend.js test/runner.js",
     "test": "mocha test/runner.js --reporter spec",
     "cover": "istanbul cover -- _mocha test/runner.js --reporter spec"
   }

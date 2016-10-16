@@ -33,7 +33,8 @@
   },
   "parser": "esprima-fb",
   "env": {
-    "node": true
+    "node": true,
+    "mocha": true
   },
   "extends": "eslint:recommended",
   "plugins": [
