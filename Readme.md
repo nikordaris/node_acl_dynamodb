@@ -1,12 +1,12 @@
-#NODE ACL - DynamoDB backend
+# NODE ACL - DynamoDB backend
 This fork adds DynamoDB backend support to [NODE ACL](https://github.com/OptimalBits/node_acl)
 
-##Status
+## Status
 
 [![BuildStatus](https://secure.travis-ci.org/nharris85/node_acl_dynamodb.png?branch=master)](http://travis-ci.org/nharris85/node_acl_dynamodb)
 [![Dependency Status](https://david-dm.org/nharris85/node_acl_dynamodb.svg)](https://david-dm.org/nharris85/node_acl_dynamodb)
 [![devDependency Status](https://david-dm.org/nharris85/node_acl_dynamodb/dev-status.svg)](https://david-dm.org/nharris85/node_acl_dynamodb#info=devDependencies)
-##Installation
+## Installation
 
 Using npm:
 
@@ -14,7 +14,7 @@ Using npm:
 npm install acl-dynamodb
 ```
 
-##Usage
+## Usage
 Download and install [DynamoDB Local](http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Tools.DynamoDBLocal.html#Tools.DynamoDBLocal.DownloadingAndRunning)
 Start DynamoDB. See documentation for commandline arguments.
 Create DynamoDB database object in your node.js application.
@@ -41,7 +41,7 @@ acl = new Acl(new dynamodbBackend(db));
 acl = new Acl(new dynamodbBackend(db, 'acl_', true));
 ```
 
-##Documentation
+## Documentation
 See [NODE ACL documentation](https://github.com/OptimalBits/node_acl#documentation)
 See [AWS DynamoDB JS documentation](http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/DynamoDB.html)
 See [AWS DynamoDB documentation](http://aws.amazon.com/documentation/dynamodb/)
